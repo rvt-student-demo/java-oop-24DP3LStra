@@ -21,6 +21,10 @@ public class Person {
     }
 
     public String toString() {
-        return this.name + "\n " + this.address ;
+        return this.name + "\n\t" + this.address ;
+    }
+
+    public String person(){
+        return getName() + getAddress() + toString() ;
     }
 }
