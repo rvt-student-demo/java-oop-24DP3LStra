@@ -20,30 +20,21 @@ public class UserInterface {
                 break;
             }
 
-            processCommand(command);
-        }
-    }
-
-    private void processCommand(String command) {
-        if (command.equals("add")) {
-            System.out.print("To add: ");
-            String task = scanner.nextLine();
-            todoList.add(task);
-            
-        } else if (command.equals("list")) {
-            todoList.print();
-            
-        } else if (command.equals("remove")) {
-            System.out.print("Which one is removed? ");
-            try {
-                int id = Integer.parseInt(scanner.nextLine());
-                todoList.remove(id);
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid numeric ID.");
+            if (command.equals("add")) {
+                System.out.print("To add: ");
+                String task = scanner.nextLine();
+                todoList.add(task);
             }
-            
-        } else {
-            System.out.println("Unknown command");
+
+            if (command.equals("list")) {
+                todoList.print();
+            }
+
+            if (command.equals("remove")) {
+                System.out.print("Which one is removed? ");
+                int number = Integer.valueOf(scanner.nextLine());
+                todoList.remove(number);
+            }
         }
     }
 }
