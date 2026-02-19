@@ -67,13 +67,22 @@ public class TodoList {
 
     }
 
+    // Overloaded method to update a specific task and persist the changes
+    public boolean updateFile(int number, String newTask) {
+        if (number < 1 || number > tasks.size()) {
+            return false;
+        }
+        tasks.set(number - 1, newTask);
+        return updateFile();
+    }
+
     // Izmantojot RegEx - pārbaudīt lai aktivitāte saturētu tikai burtus, ciparus un atstarpes
     // Aktivitātes garums - min. 3 simboli, (.lenght() metode)
     public boolean checkEventString(String value){
         if(value.length() < 3){
             return false;
         }
-        return value.matches("^[a-zA-Z0-9\\s]+$");
+        return value.matches("[a-zA-Z0-9 ]+");
     }
 
     public void print() {
