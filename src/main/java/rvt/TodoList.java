@@ -40,7 +40,7 @@ public class TodoList {
         //getLastId(), lai ieraksts failā saturātu tādus datus:
         //<id>, <task>
         int newId = getLastId() + 1; // Ja nav uzdevumu, sāksies ar 1
-        String newLine = newId + "," + task + System.lineSeparator();
+        String newLine = System.lineSeparator() + newId + "," + task;
         try {
             Files.write(Paths.get(filePath), newLine.getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {

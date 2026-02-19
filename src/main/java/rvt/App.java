@@ -3,6 +3,7 @@ package rvt;
 public class App {
     public static void main(String[] args) {
         TodoList list = new TodoList();
+        list.add("Got to the store");
         list.print();
         list.remove(2);
         list.print();
@@ -10,7 +11,6 @@ public class App {
         list.print();
         list.remove(1);
         list.remove(1);
-
         list.print();
 
     }
