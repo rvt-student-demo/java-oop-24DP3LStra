@@ -2,29 +2,15 @@ package rvt;
 
 public class Person {
     private String name;
-    private String address;
+    private int age;
 
-
-    public Person(String name, String address){
-        this.name = name; // this - ir kaa adrese uz konkretu prieksmetu
-        this.address = address;
-        
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-
-    public String getName(){
-        return this.name;
-    }
-
-    public String getAddress(){
-        return this.address;
-    }
-
+    @Override
     public String toString() {
-        return this.name + "\n\t" + this.address ;
-    }
-
-    public String person(){
-        return getName() + getAddress() + toString() ;
+        return name + " (" + age + " years) ";
     }
 }

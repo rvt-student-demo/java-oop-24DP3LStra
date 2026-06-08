@@ -1,6 +1,6 @@
 package rvt;
 
-public class Teacher extends Person{
+public class Teacher extends Person1{
     private int salary;
 
     public Teacher(String name, String address, int salary) {
