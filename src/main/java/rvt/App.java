@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+<<<<<<< HEAD
         setupDatabase();
         Scanner scanner = new Scanner(System.in);
         
@@ -25,6 +26,13 @@ public class App {
                 case 3 -> listAll();
             }
         }
+=======
+        IoweYou mattsIOU = new IoweYou();
+        mattsIOU.setSum("Arthur", 51.5);
+        mattsIOU.setSum("Arthur", 10.5);
+
+        System.out.println(mattsIOU.howMuchDoIOweTo("Arthur"));
+>>>>>>> f74ad9b2bd1b4eaae39b3ba089fcaa747b0e556b
     }
 
     private static void setupDatabase() {
